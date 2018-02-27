@@ -2,7 +2,7 @@
 
 cd "$(dirname "$0")"
 scriptDir="$(pwd)"
-echo $scriptDir
+
 function installPackages {
     sudo apt update
     sudo apt -y dist-upgrade
@@ -88,7 +88,6 @@ function installConfigFiles {
     crontab < config/crontab
 }
 
-
-# installPackages
+installPackages
 installBspwm
 installConfigFiles
