@@ -7,7 +7,7 @@ xrdb -merge $HOME/.xresources
 xsetroot -cursor_name left_ptr &
 
 # use saved screenlayout script from arandr
-screenLayoutScript=$HOME/.screenlayout
+screenLayoutScript=$HOME/.screenlayout/main.sh
 if [ -f "$screenLayoutScript" ] ; then
     $screenLayoutScript &
 fi
