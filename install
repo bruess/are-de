@@ -49,7 +49,7 @@ function installPackages {
 }
 
 function installConfigFiles {
-    mkdir ~/.config/bspwm 2> /dev/null
+    mkdir -p ~/.config/bspwm 2> /dev/null
 
     ln -sf config/bspwmrc ~/.config/bspwm/bspwmrc
     ln -sf config/xinitrc ~/.xinitrc
