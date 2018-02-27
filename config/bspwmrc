@@ -20,7 +20,7 @@ bspc config split_ratio 0.50
 redshift -O 3400 &
 
 # Set Background
-feh --bg-tile wallpaper.png &
+feh --bg-tile config/wallpaper.png &
 
 # Keybindings
 killall xbindkeys

@@ -12,4 +12,5 @@ if [ -f "$screenLayoutScript" ] ; then
     $screenLayoutScript &
 fi
 
- exec caffeinate bspwm
+# Start bspwm
+exec caffeinate bspwm
