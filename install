@@ -40,11 +40,33 @@ function installPackages {
         # Themeing
         'arc-theme'
         'dmz-cursor-theme'
+        # bspwm - complile
+        'gcc'
+        'make'
+        'xcb'
+        'libxcb-util0-dev'
+        'libxcb-ewmh-dev'
+        'libxcb-randr0-dev'
+        'libxcb-icccm4-dev'
+        'libxcb-keysyms1-dev'
+        'libxcb-xinerama0-dev'
+        'libasound2-dev'
+        'libxcb-xtest0-dev'
     )
 
     for package in ${packages[@]} ; do
         sudo apt install -y $package
     done
+
+}
+
+function installBspwm {
+    cd
+    git clone https://github.com/baskerville/bspwm.git
+    cd bspwm
+
+    make
+    sudo make install
 
 }
 
@@ -61,6 +83,7 @@ function installConfigFiles {
     crontab < config/crontab
 }
 
+installBspwm
 
 installPackages
 installConfigFiles
