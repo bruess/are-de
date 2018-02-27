@@ -32,10 +32,9 @@ function installPackages {
         'redshift'
         'dmenu'
         'xbindkeys'
-        'nautilus'
         # Desktop
-        'chromium-browser'
         'firefox'
+        'nautilus'
         # bspwm - complile
         'gcc'
         'make'
