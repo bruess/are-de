@@ -2,7 +2,7 @@
 
 scriptDir="$(dirname "$0")"
 cd $scriptDir
-
+echo $scriptDir
 function installPackages {
     sudo apt update
     sudo apt -y dist-upgrade
