@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-scriptDir="$(dirname "$0")"
-cd $scriptDir
+cd "$(dirname "$0")"
+scriptDir="$(pwd)"
 echo $scriptDir
 function installPackages {
     sudo apt update
