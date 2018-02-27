@@ -75,7 +75,7 @@ function installBspwm {
 
 function installConfigFiles {
     cd $scriptDir
-
+    echo $scriptDir
     mkdir -p ~/.config/bspwm 2> /dev/null
 
     touch ~/.Xauthority
@@ -89,6 +89,6 @@ function installConfigFiles {
 }
 
 
-installPackages
-installBspwm
+# installPackages
+# installBspwm
 installConfigFiles
