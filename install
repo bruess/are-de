@@ -34,13 +34,9 @@ function installPackages {
         'xbindkeys'
         'nautilus'
         # Desktop
-        'lxappearance'
         'chromium-browser'
         'firefox'
-        'tilix'
-        # Themeing
-        'arc-theme'
-        'dmz-cursor-theme'
+        'urxvt'
         # bspwm - complile
         'gcc'
         'make'
