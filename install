@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "$0")"
+scriptDir="$(dirname "$0")"
+cd $scriptDir
 
 function installPackages {
     sudo apt update
@@ -73,6 +74,8 @@ function installBspwm {
 }
 
 function installConfigFiles {
+    cd $scriptDir
+
     mkdir -p ~/.config/bspwm 2> /dev/null
 
     touch ~/.Xauthority
