@@ -8,7 +8,7 @@
     Mod4 + space
 
 # terminal emulator
-"tilix"
+"xterm"
     Mod4 + Return
 
 # file browser
