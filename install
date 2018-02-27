@@ -71,7 +71,7 @@ function installBspwm {
 
 function installConfigFiles {
     cd $scriptDir
-    echo $scriptDir
+
     mkdir -p ~/.config/bspwm 2> /dev/null
 
     touch ~/.Xauthority
@@ -80,7 +80,7 @@ function installConfigFiles {
     ln -sf config/xinitrc ~/.xinitrc
     ln -sf config/xresources ~/.xresources
     ln -sf config/xbindkeysrc ~/.xbindkeysrc
-    pwd
+
     crontab < config/crontab
 }
 
