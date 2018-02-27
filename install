@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")"
+
+function installPackages {
+    sudo apt update
+    sudo apt -y dist-upgrade
+    sudo apt -y autoremove
+
+    packages=(
+        # Base
+        'ssh'
+        'git'
+        'fish'
+        'curl'
+        'nmap'
+        'unzip'
+        'nano'
+        'net-tools'
+        'zfsutils-linux'
+        'traceroute'
+        'sshfs'
+        'ntpdate'
+        'htop'
+        # Desktop Environment
+        'xinit'
+        'bspwm'
+        'feh'
+        'arandr'
+        'caffeine'
+        'redshift'
+        'dmenu'
+        'xbindkeys'
+        'nautilus'
+        # Desktop
+        'lxappearance'
+        'chromium-browser'
+        'firefox'
+        'tilix'
+        # Themeing
+        'arc-theme'
+        'dmz-cursor-theme'
+    )
+
+    for package in ${packages[@]} ; do
+        sudo apt install -y $package
+    done
+
+}
+
+function installConfigFiles {
+    mkdir ~/.config/bspwm 2> /dev/null
+
+    ln -sf config/bspwmrc ~/.config/bspwm/bspwmrc
+    ln -sf config/xinitrc ~/.xinitrc
+    ln -sf config/xresources ~/.xresources
+    ln -sf config/xbindkeysrc ~/.xbindkeysrc
+
+    crontab < config/crontab
+}
+
+
+installPackages
+installConfigFiles

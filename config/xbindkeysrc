@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+
+# ------------------------- #
+# System Shortcuts
+# ------------------------- #
+# program launcher
+"dmenu_run"
+    Mod4 + space
+
+# terminal emulator
+"tilix"
+    Mod4 + Return
+
+# file browser
+"nautilus"
+    Mod4 + n
+
+# quit bspwm normally
+"bspc quit"
+    Mod4 + alt + Escape
+
+# close node
+"bspc node -c"
+    Mod4 + w
+
+# kill node
+"bspc node -k"
+    Mod4 + q
+
+# Prev Desktop
+"bspc desktop -f prev.local"
+    Mod4 + bracketleft
+
+# Next Desktop
+"bspc desktop -f next.local"
+    Mod4 + bracketright
+
+# send node to the prev desktop
+"bspc node -d prev.local"
+    Mod4 + Shift + bracketleft
+
+# send node to the next desktop
+"bspc node -d next.local"
+    Mod4 + Shift + bracketright
+
+# ------------------------- #
+# BSPWM Node State Shortcuts
+# ------------------------- #
+
+# set the node to tiled
+"bspc node -t tiled"
+    Mod4 + t
+
+# set the node to pseudo_tiled
+"bspc node -t pseudo_tiled"
+    Mod4 + Shift + t
+
+# set the node to floating
+"bspc node -t floating"
+    Mod4 + s
+
+# set the node to fullscreen
+"bspc node -t fullscreen"
+    Mod4 + f
+
+# ------------------------- #
+# BSPWM Node Focus Shortcuts
+# ------------------------- #
+
+# focus the node in the given direction
+"bspc node -f west"
+    Mod4 + h
+
+# focus the node in the given direction
+"bspc node -f south"
+    Mod4 + j
+
+# focus the node in the given direction
+"bspc node -f north"
+    Mod4 + k
+
+# focus the node in the given direction
+"bspc node -f east"
+    Mod4 + l
+
+# ------------------------- #
+# BSPWM Node Preselection Shortcuts
+# ------------------------- #
+
+# preselect the direction
+"bspc node -p west"
+    Mod4 + Control + h
+
+# preselect the direction
+"bspc node -p south"
+    Mod4 + Control + j
+
+# preselect the direction
+"bspc node -p north"
+    Mod4 + Control + k
+
+# preselect the direction
+"bspc node -p east"
+    Mod4 + Control + l
+
+# cancel the preselection for the focused node
+"bspc node -p cancel"
+    Mod4 + Control + space

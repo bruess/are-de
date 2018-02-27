@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")"
+
+for monitor in $(bspc query -M) ; do
+    bspc monitor $monitor -d I II III IV
+done
+
+bspc config focus_follows_pointer true
+bspc config click_to_focus any
+bspc config normal_border_color "#222222"
+bspc config focused_border_color "#222222"
+bspc config active_border_color "#222222"
+bspc config border_width 3
+bspc config window_gap 10
+# bspc config top_padding 0
+
+bspc config split_ratio 0.50
+
+# Red tint screen
+redshift -O 3400 &
+
+# Set Background
+feh --bg-tile wallpaper.png &
+
+# Keybindings
+killall xbindkeys
+xbindkeys &

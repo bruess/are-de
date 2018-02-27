@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# merge X resources
+xrdb -merge $HOME/.xresources
+
+# Set default cursor
+xsetroot -cursor_name left_ptr &
+
+# use saved screenlayout script from arandr
+screenLayoutScript=$HOME/.screenlayout
+if [ -f "$screenLayoutScript" ] ; then
+    $screenLayoutScript &
+fi
+
+ exec caffeinate bspwm
