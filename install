@@ -83,7 +83,7 @@ function installConfigFiles {
     crontab < config/crontab
 }
 
-installBspwm
 
 installPackages
+installBspwm
 installConfigFiles
