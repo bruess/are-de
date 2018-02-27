@@ -76,12 +76,12 @@ function installConfigFiles {
 
     touch ~/.Xauthority
 
-    ln -sf config/bspwmrc ~/.config/bspwm/bspwmrc
-    ln -sf config/xinitrc ~/.xinitrc
-    ln -sf config/xresources ~/.xresources
-    ln -sf config/xbindkeysrc ~/.xbindkeysrc
+    ln -sf $scriptDir/config/bspwmrc ~/.config/bspwm/bspwmrc
+    ln -sf $scriptDir/config/xinitrc ~/.xinitrc
+    ln -sf $scriptDir/config/xresources ~/.xresources
+    ln -sf $scriptDir/config/xbindkeysrc ~/.xbindkeysrc
 
-    crontab < config/crontab
+    crontab < $scriptDir/config/crontab
 }
 
 installPackages
