@@ -84,7 +84,7 @@ function installConfigFiles {
     ln -sf config/xinitrc ~/.xinitrc
     ln -sf config/xresources ~/.xresources
     ln -sf config/xbindkeysrc ~/.xbindkeysrc
-
+    pwd
     crontab < config/crontab
 }
 
