@@ -51,6 +51,8 @@ function installPackages {
 function installConfigFiles {
     mkdir -p ~/.config/bspwm 2> /dev/null
 
+    touch ~/.Xauthority
+
     ln -sf config/bspwmrc ~/.config/bspwm/bspwmrc
     ln -sf config/xinitrc ~/.xinitrc
     ln -sf config/xresources ~/.xresources
